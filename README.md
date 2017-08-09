@@ -37,5 +37,22 @@
     client = Client(api_key, device_id)
     response = client.digitalWrite('0', 'HIGH')
     ```
-    
+
+## Bolt API documenation
+
+You can find the Bolt API documenation here http://cloud.boltiot.com/api_credentials.
+
+## Contributing
+
+Your contributions are always welcome! Please refer ths contribution guidelines. 
+
+### Guidelines
+* Fork the repository on GitHub.
+* Create a feature branch only when you are working on new feature. 
+* Write a test which shows that the bug was fixed or that the feature works as expected.
+* Never work on master branch
+* Send a pull request and until it gets merged and published. :)
+* Check your spelling and grammar.
+* Remove any trailing whitespace.
+
 
