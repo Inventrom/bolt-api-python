@@ -48,8 +48,8 @@ Your contributions are always welcome! Please refer ths contribution guidelines.
 
 ### Guidelines
 * Fork the repository on GitHub.
-* Create a develement branch with name dev.
-* Create a feature branch only when you are working on new feature. 
+* First checkout to dev branch.
+* Create a feature branch only when you are working on a new feature. 
 * Write a test which shows that the bug was fixed or that the feature works as expected.
 * Never work on master branch
 * Send a pull request and until it gets merged and published. :)
