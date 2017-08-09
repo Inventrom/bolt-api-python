@@ -1,1 +1,41 @@
 # bolt-api-python
+
+## Problem Statment
+
+1. Currently, the user has to set the API key and  device id every time with cloud URL.
+
+    For example.
+    
+    `http://cloud.boltiot.com/remote/abc061df-bef5-4881-b54e-a73099e3f66b/digitalWrite?pin=0&state=LOW&deviceName=BOLTxXXXXX`
+
+2. The user has to install the request library by himself and there is a learning curve of request library of itself.
+    For example.
+    
+    `pip install requests`
+    ```python
+    import requests 
+    urlON="http://cloud.boltiot.com/remote/YourDeviceAPI/ONCommand&deviceName=BOLTxxxxxxx"
+    urlOFF="http://cloud.boltiot.com/remote/YourDeviceAPI/OFFCommand&deviceName=BOLTxxxxxxx" 
+    r=requests.get(urlON) 
+    r=requests.get(urlOFF)
+    ```
+## Expected Solution
+
+1. User need to type just one command
+
+    `pip install bolt`
+    
+
+2. The user will set the client once and he can use the same client for every operation.
+    For example.
+    
+    `pip install requests`
+    ```python
+    from bolt import Client
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    client = Client(api_key, device_id)
+    response = client.digitalWrite('0', 'HIGH')
+    ```
+    
+
