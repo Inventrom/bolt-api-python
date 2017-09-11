@@ -1,3 +1,4 @@
+#Creating a key value store for all the urls
 url = {
     'digitalWrite' : 'http://cloud.boltiot.com/remote/{}/digitalWrite?pin={}&state={}&deviceName={}',
     'digitalRead' : 'http://cloud.boltiot.com/remote/{}/digitalRead?pin={}&deviceName={}',
