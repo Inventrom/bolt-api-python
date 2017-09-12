@@ -29,7 +29,6 @@
 2. The user will set the client once and he can use the same client for every operation.
     For example.
     
-    `pip install requests`
     ```python
     from bolt import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
