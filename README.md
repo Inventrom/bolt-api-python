@@ -40,13 +40,40 @@
 ##  Library Functions
 
 1. digitalWrite Command
-    
+    
     ```python
     from bolt import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
     response = mybolt.digitalWrite('0', 'HIGH')
+    ```
+ 2. digitalRead Command
+    
+    ```python
+    from bolt import Bolt
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    mybolt = Bolt(api_key, device_id)
+    response = mybolt.digitalRead('A0')
+    ```
+ 3. analogRead Command
+    
+    ```python
+    from bolt import Bolt
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    mybolt = Bolt(api_key, device_id)
+    response = mybolt.analogRead('A0')
+    ```
+  3. analogWrite Command
+    
+    ```python
+    from bolt import Bolt
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    mybolt = Bolt(api_key, device_id)
+    response = mybolt.analogWrite('0', '100')
     ```
 
 ## Bolt API documenation
