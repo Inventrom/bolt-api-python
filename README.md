@@ -37,7 +37,7 @@
     mybolt = Bolt(api_key, device_id)
     response = client.digitalWrite('0', 'HIGH')
     ```
-##  Library Functions
+##  GPIO Functions
 
 1. digitalWrite Command
     
@@ -74,6 +74,25 @@
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
     response = mybolt.analogWrite('0', '100')
+    ```
+  
+ 5. restart Command (to restart the Bolt)
+    
+    ```python
+    from bolt import Bolt
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    mybolt = Bolt(api_key, device_id)
+    response = mybolt.restart()
+    ```
+ 6. version Command (to check device version)
+    
+    ```python
+    from bolt import Bolt
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    mybolt = Bolt(api_key, device_id)
+    response = mybolt.version()
     ```
 
 ## Bolt API documenation
