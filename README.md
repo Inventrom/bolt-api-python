@@ -115,8 +115,8 @@
     mybolt = Bolt(api_key, device_id)
     response = mybolt.serialWrite('Hello')
     ```
-  3. serialRead Command
-    
+3. serialRead Command
+       
     ```python
     from bolt import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
