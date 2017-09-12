@@ -1,5 +1,8 @@
 # bolt-api-python
 
+## Goal
+The goal of this library is to provide the easy to read a simple use of Bolt cloud api to the makers and developers. The functions will be quite similar to the Raspberry Pi and Arduino functions. 
+
 ## Problem Statment
 
 1. Currently, the user has to set the API key and  device id every time with cloud URL.
