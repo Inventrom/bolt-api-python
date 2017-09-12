@@ -1,7 +1,7 @@
 # bolt-api-python
 
 ## Goal
-The goal of this library is to provide the easy to read a simple use of Bolt cloud api to the makers and developers. The functions will be quite similar to the Raspberry Pi and Arduino functions. 
+The goal of this library is to provide an easy to use interface of Bolt Cloud API's. The functions will be quite similar to the Raspberry Pi and Arduino functions.
 
 ## Problem Statment
 
@@ -133,7 +133,7 @@ You can find the Bolt API documentation here http://cloud.boltiot.com/api_creden
 
 ## Contributing
 
-Your contributions are always welcome! Please refer ths contribution guidelines. 
+Your contributions are always welcome! Please refer to the contribution guidelines. 
 
 ### Guidelines
 * Fork the repository on GitHub.
@@ -141,8 +141,8 @@ Your contributions are always welcome! Please refer ths contribution guidelines.
 * Create a feature branch only when you are working on a new feature. 
 * Write a test which shows that the bug was fixed or that the feature works as expected.
 * Never work on master branch
-* Send a pull request and until it gets merged and published. :)
+* Send a pull request and wait until it gets merged and published. :)
 * Check your spelling and grammar.
-* Remove any trailing whitespace.
+* Remove any trailing whitespaces.
 
 
