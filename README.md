@@ -66,7 +66,7 @@
     mybolt = Bolt(api_key, device_id)
     response = mybolt.analogRead('A0')
     ```
-  3. analogWrite Command
+ 4. analogWrite Command
     
     ```python
     from bolt import Bolt
