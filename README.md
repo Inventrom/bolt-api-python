@@ -77,25 +77,6 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
     mybolt = Bolt(api_key, device_id)
     response = mybolt.analogWrite('0', '100')
     ```
-  
- 5. restart Command (to restart the Bolt)
-    
-    ```python
-    from bolt import Bolt
-    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-    device_id  = “BOLT1234"
-    mybolt = Bolt(api_key, device_id)
-    response = mybolt.restart()
-    ```
- 6. version Command (to check device version)
-    
-    ```python
-    from bolt import Bolt
-    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-    device_id  = “BOLT1234"
-    mybolt = Bolt(api_key, device_id)
-    response = mybolt.version()
-    ```
 
 ##  UART Functions
 
@@ -126,7 +107,35 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
     mybolt = Bolt(api_key, device_id)
     response = mybolt.serialRead('10')
     ```
+ ##  Utility Functions
+1. isAlive Command (to check the status of device)
+    
+    ```python
+    from bolt import Bolt
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    mybolt = Bolt(api_key, device_id)
+    response = mybolt.isAlive()
+    ```
     
+2. restart Command (to restart the Bolt)
+    
+    ```python
+    from bolt import Bolt
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    mybolt = Bolt(api_key, device_id)
+    response = mybolt.restart()
+    ```
+ 3. version Command (to check device version)
+    
+    ```python
+    from bolt import Bolt
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    mybolt = Bolt(api_key, device_id)
+    response = mybolt.version()
+    ```
 ## Bolt API documenation
 
 You can find the Bolt API documentation here http://cloud.boltiot.com/api_credentials.
