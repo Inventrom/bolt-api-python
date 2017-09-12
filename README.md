@@ -95,6 +95,36 @@
     response = mybolt.version()
     ```
 
+##  UART Functions
+
+1. serialBegin Command
+    
+    ```python
+    from bolt import Bolt
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    mybolt = Bolt(api_key, device_id)
+    response = mybolt.serialBegin('9600')
+    ```
+ 2. serialWrite Command
+    
+    ```python
+    from bolt import Bolt
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    mybolt = Bolt(api_key, device_id)
+    response = mybolt.serialWrite('Hello')
+    ```
+  2. serialRead Command
+    
+    ```python
+    from bolt import Bolt
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    mybolt = Bolt(api_key, device_id)
+    response = mybolt.serialRead('10')
+    ```
+    
 ## Bolt API documenation
 
 You can find the Bolt API documentation here http://cloud.boltiot.com/api_credentials.
