@@ -31,11 +31,22 @@
     
     `pip install requests`
     ```python
-    from bolt import Client
+    from bolt import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
-    client = Client(api_key, device_id)
+    mybolt = Bolt(api_key, device_id)
     response = client.digitalWrite('0', 'HIGH')
+    ```
+##  Library Functions
+
+1. digitalWrite Command
+    
+    ```python
+    from bolt import Bolt
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    mybolt = Bolt(api_key, device_id)
+    response = mybolt.digitalWrite('0', 'HIGH')
     ```
 
 ## Bolt API documenation
