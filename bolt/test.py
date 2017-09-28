@@ -1,12 +1,12 @@
-from api import Client
+from bolt import Bolt
 
 #Creating all test cases
 
 #Creating a client
-client = Client('768d64d5-05b2-463b-95bc-98eedfc5abe7', 'BOLT3432361')
+client = Bolt('768d64d5-05b2-463b-95bc-98eedfc5abe7', 'BOLT3432361')
 
 #Testing digitalWrite
-#result = client.digitalWrite('0','HIGH')
+result = client.digitalWrite('0','HIGH')
 
 #Testing digitalRead
 #result = client.digitalRead('0')
@@ -30,6 +30,6 @@ client = Client('768d64d5-05b2-463b-95bc-98eedfc5abe7', 'BOLT3432361')
 #result = client.restart()
 
 #Device status
-result = client.isAlive()
+#result = client.isAlive()
 
 print(result)

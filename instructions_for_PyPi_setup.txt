@@ -1,0 +1,12 @@
+Read this instruction manual to follow the Publication of Package on PyPi
+
+1. Setup the .pypirc file. Instruction for each step is commented out.
+
+2. Setup the setup.py file. Instruction for each step is commented out.
+
+3. The download_url part -
+  create a tag using 'git tag (version here) -m 'A comment for the commit' '
+  to show list of all tags use 'git tag'
+  then do 'git push --tags origin master'
+  this will create a tar ball on github for Download
+  use this download link to put in the setup.py file
