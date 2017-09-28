@@ -90,7 +90,7 @@ class Bolt():
         return request_from(url('serialBegin'), self.api_key, baud_rate, self.device_id)
 
 
-    def setialWrite(self, data):
+    def serialWrite(self, data):
         """
         Writes the data to the serial port.
 
