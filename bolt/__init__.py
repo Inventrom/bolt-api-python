@@ -1,1 +1,1 @@
-from bolt import Client
+from bolt import Bolt
