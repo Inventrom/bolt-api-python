@@ -26,14 +26,14 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
 
 1. User need to type just one command
 
-    `pip install bolt`
+    `pip install boltiot`
     
 
 2. The user will set the client once and he can use the same client for every operation.
     For example.
     
     ```python
-    from bolt import Bolt
+    from boltiot import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
@@ -44,7 +44,7 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
 1. digitalWrite Command
     
     ```python
-    from bolt import Bolt
+    from boltiot import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
@@ -53,7 +53,7 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
  2. digitalRead Command
     
     ```python
-    from bolt import Bolt
+    from boltiot import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
@@ -62,7 +62,7 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
  3. analogRead Command
     
     ```python
-    from bolt import Bolt
+    from boltiot import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
@@ -71,7 +71,7 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
  4. analogWrite Command
     
     ```python
-    from bolt import Bolt
+    from boltiot import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
@@ -83,7 +83,7 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
 1. serialBegin Command
     
     ```python
-    from bolt import Bolt
+    from boltiot import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
@@ -92,7 +92,7 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
  2. serialWrite Command
     
     ```python
-    from bolt import Bolt
+    from boltiot import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
@@ -101,7 +101,7 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
 3. serialRead Command
        
     ```python
-    from bolt import Bolt
+    from boltiot import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
@@ -111,7 +111,7 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
 1. isAlive Command (to check the status of device)
     
     ```python
-    from bolt import Bolt
+    from boltiot import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
@@ -121,7 +121,7 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
 2. restart Command (to restart the Bolt)
     
     ```python
-    from bolt import Bolt
+    from boltiot import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
@@ -130,7 +130,7 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
  3. version Command (to check device version)
     
     ```python
-    from bolt import Bolt
+    from boltiot import Bolt
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
