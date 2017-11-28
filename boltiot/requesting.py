@@ -1,4 +1,4 @@
-from urls import url
+from boltiot.urls import url
 import requests
 
 def request_from(url, *kwargs):
