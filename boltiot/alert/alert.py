@@ -1,4 +1,8 @@
 from twilio.rest import Client
+import requests
+
+
+BASE_URL = 'https://api.mailgun.net/v3/{}/messages'
 
 class Sms():
     def __init__(self, account_sid, auth_token, to_number, from_number):
@@ -12,3 +16,21 @@ class Sms():
             from_ = self.from_number,
             body = message)
         return response
+
+
+class Email():
+    def __init__(self, api_key, mailgun_domain_name, from_email, to_email):
+        self.auth =  api_key
+        self.url = BASE_URL.format(mailgun_domain_name)
+        self.mailgun_domain_name = mailgun_domain_name
+        self.from_email = from_email
+        self.to_email = to_email
+
+    def send_email(self, subject, body):
+        return requests.post(
+            self.url,
+            auth=("api", self.auth),
+            data={"from": self.from_email,
+              "to": self.to_email,
+              "subject": subject,
+              "text": body})
