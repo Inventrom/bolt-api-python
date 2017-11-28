@@ -1,7 +1,3 @@
-# from sms_sender import sms
-# from email_sender import email
-# import conf
-
 from twilio.rest import Client
 
 class Sms():
@@ -10,9 +6,9 @@ class Sms():
         self.to_number, self.from_number = to_number, from_number
         self.client = Client(self.account_sid, self.auth_token)
 
-    def send(self):
-        message = self.client.messages.create(
-            to=self.to_number,
-            from_=self.from_number,
-            body="Hello from Python!")
-        return message
+    def send(self, message = None):
+        response = self.client.messages.create(
+            to = self.to_number,
+            from_ = self.from_number,
+            body = message)
+        return response
