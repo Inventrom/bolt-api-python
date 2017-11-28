@@ -10,7 +10,7 @@ class Sms():
         self.to_number, self.from_number = to_number, from_number
         self.client = Client(self.account_sid, self.auth_token)
 
-    def send(self, message = None):
+    def send_sms(self, message = None):
         response = self.client.messages.create(
             to = self.to_number,
             from_ = self.from_number,
