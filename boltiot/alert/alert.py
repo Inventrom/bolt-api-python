@@ -5,7 +5,7 @@ import requests
 BASE_URL = 'https://api.mailgun.net/v3/{}/messages'
 
 class Sms():
-    '''will handle the seding sms'''
+    '''will handle the sending sms'''
 
     def __init__(self, account_sid, auth_token, to_number, from_number):
         """
