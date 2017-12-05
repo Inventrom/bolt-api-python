@@ -1,5 +1,5 @@
-from urls import url
-from requesting import request_from
+from boltiot.urls import url
+from boltiot.requesting import request_from
 
 #Defining a client class
 class Bolt():
