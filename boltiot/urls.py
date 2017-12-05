@@ -4,7 +4,7 @@ BASE_URL = 'http://cloud.boltiot.com/remote/'
 url_list = {
     'digitalWrite' : '{}/digitalWrite?pin={}&state={}&deviceName={}',
     'digitalRead' : '{}/digitalRead?pin={}&deviceName={}',
-    'analogWrite' : '{}/analogWrite?pin=1&value={}&state={}&deviceName={}',
+    'analogWrite' : '{}/analogWrite?pin={}&value={}&deviceName={}',
     'analogRead' : '{}/analogRead?pin={}&deviceName={}',
     'serialBegin' : '{}/serialBegin?baud={}&deviceName={}',
     'serialWrite' : '{}/serialWrite?data={}&deviceName={}',
