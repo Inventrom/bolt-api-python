@@ -133,13 +133,13 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
 2. send_email function is used to send emails using mailgun API .
     
     ```python
-    from boltiot import Sms
+    from boltiot import Email
     mailgun_api_key = 'This is the private API key which you can find on your Mailgun Dashboard' 
     sandbox_url= 'You can find this on your Mailgun Dashboard' 
     sender_email = 'This would be test@your SANDBOX_URL'
     recipient_email = 'Enter your Email ID Here'
     mailer = Email(mailgun_api_key, sandbox_url, sender_email, recipient_email)
-    mailer.send_email("Your email content")
+    mailer.send_email("Email Subject", "Email Body")
     
     
 ## Bolt API documenation
