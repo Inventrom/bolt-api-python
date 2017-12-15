@@ -3,28 +3,10 @@
 ## Goal
 The goal of this library is to provide an easy to use interface of Bolt Cloud API's. The functions will be quite similar to the Raspberry Pi and Arduino functions.
 
-## Problem Statment
 
-1. Currently, the user has to set the API key and  device id every time with cloud URL.
+## Installation 
 
-    For example.
-    
-    `http://cloud.boltiot.com/remote/abc061df-bef5-4881-b54e-a73099e3f66b/digitalWrite?pin=0&state=LOW&deviceName=BOLTxXXXXX`
-
-2. The user has to install the request library by himself and there is a learning curve of request library of itself.
-    For example.
-    
-    `pip install requests`
-    ```python
-    import requests 
-    urlON="http://cloud.boltiot.com/remote/YourDeviceAPI/ONCommand&deviceName=BOLTxxxxxxx"
-    urlOFF="http://cloud.boltiot.com/remote/YourDeviceAPI/OFFCommand&deviceName=BOLTxxxxxxx" 
-    r=requests.get(urlON) 
-    r=requests.get(urlOFF)
-    ```
-## Expected Solution
-
-1. User need to type just one command
+1. Users need to type just one command
 
     `pip install boltiot`
     
