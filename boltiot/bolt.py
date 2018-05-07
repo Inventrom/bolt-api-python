@@ -161,10 +161,13 @@ class Bolt():
 
     def isOnline(self):
         """
-        Check the device status with last updated time
+        The command tells the user about the status of the device,
+        if it is Online/Offline along with the last seen time
 
         :param None
-        :returns:  request status, device status: online/offline, time: last of last updated value
+        :returns : {success: status of the request(true/false),
+                    value: device status (online/offline),
+                    time: Last seen time of the Bolt device (format: day yyyy-mm-dd hh-mm-ss)}
         :example: {"success": "1", "value": "online", "time":"Sun 2018-05-06 08:14:43"}
 
         :rtype: JSON
