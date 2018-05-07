@@ -12,6 +12,7 @@ url_list = {
     'version' : '{}/version?&deviceName={}',
     'restart' : '{}/restart?&deviceName={}',
     'isAlive' : '{}/isAlive?&deviceName={}',
+    'isOnline' : '{}/isOnline?&deviceName={}',
 }
 
 def url(operation):
