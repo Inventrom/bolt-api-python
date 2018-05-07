@@ -118,6 +118,16 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
     mybolt = Bolt(api_key, device_id)
     response = mybolt.version()
     ```
+
+4. isOnline Command (to check recent status of device with time when status updated)
+    
+    ```python
+    from boltiot import Bolt
+    api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    device_id  = “BOLT1234"
+    mybolt = Bolt(api_key, device_id)
+    response = mybolt.isOnline()
+    ```
  ##  Alert Functions
 1. send_sms function is used to send email using twilio API .
     
