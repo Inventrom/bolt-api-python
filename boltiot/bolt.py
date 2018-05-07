@@ -158,3 +158,15 @@ class Bolt():
         :rtype: JSON
         """
         return request_from(url('isAlive'), self.api_key, self.device_id)
+
+    def isOnline(self):
+        """
+        Check the device status with last updated time
+
+        :param None
+        :returns:  request status, device status: online/offline, time: last of last updated value
+        :example: {"success": "1", "value": "online", "time":"Sun 2018-05-06 08:14:43"}
+
+        :rtype: JSON
+        """
+        return request_from(url('isOnline'), self.api_key, self.device_id)
