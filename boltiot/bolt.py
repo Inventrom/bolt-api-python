@@ -165,10 +165,10 @@ class Bolt():
         if it is Online/Offline along with time when status changed.
 
         :param None
-        :returns : {success: status of the request(true/false),
+        :returns : {success: status of the request(1/0),
                     value: device status (online/offline),
                     time: the time when the device was online/offline respectively
-                          (format: day yyyy-mm-dd hh:mm:ss)}
+                          (format: day yyyy-mm-dd hh:mm:ss TZ)}
         :example: {"success": "1", "value": "online", "time":"Sun 2018-05-06 08:14:43 UTC"}
 
         :rtype: JSON
