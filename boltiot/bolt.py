@@ -162,7 +162,7 @@ class Bolt():
     def isOnline(self):
         """
         The command tells the user about the status of the device,
-        if it is Online/Offline along with the last seen time
+        if it is Online/Offline along with time when status changed.
 
         :param None
         :returns : {success: status of the request(true/false),
