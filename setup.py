@@ -9,6 +9,7 @@ setup(
     author_email  = [''], #Author's Email
     url = [''], #URL for github repository
     download = [''], #Download URL for github repository. Look at instructions...txt file for this part
+    install_requires=['twilio','requests'], #Automatic installation for any dependencies.
     keywords = [''], #Add keywords
     classifiers = [], #Leave this
 )
