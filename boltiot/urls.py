@@ -1,4 +1,5 @@
 #Creating a key value store for all the urls
+
 BASE_URL = 'http://cloud.boltiot.com/remote/'
 
 url_list = {

@@ -19,7 +19,7 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
     api_key = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     device_id  = “BOLT1234"
     mybolt = Bolt(api_key, device_id)
-    response = client.digitalWrite('0', 'HIGH')
+    response = mybolt.digitalWrite('0', 'HIGH')
     ```
 ##  GPIO Functions
 
