@@ -1,0 +1,9 @@
+**** Follow This Hardware Setup Guide Before Running a Unit test ****
+
+1. Make sure that Bolt is connected to the Bolt Cloud.
+2. Make sure that you have entered the correct API_KEY and BOLT_ID before running the test.
+-----  FOLLOW THESE CONNECTIONS SPECIFICALLY ------
+3. Rx of Bolt connected to the Tx of Bolt (Short your Rx and Tx pins).
+4. Digital Pin 4 of Bolt connected to Digital Pin 1 of your Bolt (Short digital pins 1 and 4)
+
+That's the only hardware setup required. Once you have done that, you can run the unittest
