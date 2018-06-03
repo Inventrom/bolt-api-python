@@ -3,7 +3,7 @@ import unittest
 import json
 import time
 
-client = Bolt('7bc48b25-f5c8-4ef3-9477-c599835583da','BOLT3729610') # Pass in the API Key and the client ID.
+client = Bolt('<your-api-key-here>','<your-bolt-id>') # Pass in the API Key and the client ID.
 
 class BoltTests(unittest.TestCase):
     
