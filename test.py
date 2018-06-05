@@ -9,7 +9,7 @@ class BoltTests(unittest.TestCase):
     
 # Testing the digital write function.
     
-    def test_1(self):
+    def test_01(self):
         assert_value = json.loads(client.digitalWrite('4','HIGH'))
         self.assertEqual(assert_value["success"],"1")
         self.assertEqual(assert_value["value"],"1")
@@ -17,7 +17,7 @@ class BoltTests(unittest.TestCase):
 
 # Testing the analog write function
         
-    def test_3(self):
+    def test_03(self):
         assert_value = json.loads(client.analogWrite('0','100'))
         self.assertEqual(assert_value["success"],"1")
         self.assertEqual(assert_value["value"],"1")
@@ -25,7 +25,7 @@ class BoltTests(unittest.TestCase):
         
 # Testing the digital read function.
         
-    def test_2(self):
+    def test_02(self):
         assert_value = json.loads(client.digitalRead('1'))
         self.assertEqual(assert_value["success"],"1")
         self.assertEqual(int(assert_value["value"]),1)
@@ -33,7 +33,7 @@ class BoltTests(unittest.TestCase):
         
 # Testing the analog read function.
         
-    def test_4(self):
+    def test_04(self):
         assert_value = json.loads(client.analogRead('A0'))
         self.assertEqual(assert_value["success"],"1")
         self.assertTrue(0 <= int(assert_value["value"]) <= 1024)
@@ -41,7 +41,7 @@ class BoltTests(unittest.TestCase):
         
 # Testing the serialBegin() function.
         
-    def test_5(self):
+    def test_05(self):
         assert_value = json.loads(client.serialBegin("9600"))
         self.assertEqual(assert_value["success"],"1")
         self.assertEqual(assert_value["value"],"Success")
@@ -49,7 +49,7 @@ class BoltTests(unittest.TestCase):
         
 # Testing the serialWrite() function.
         
-    def test_6(self):
+    def test_06(self):
         assert_value = json.loads(client.serialWrite('inventrom'))
         self.assertEqual(assert_value["success"],"1")
         self.assertEqual(assert_value["value"],"Serial write Successful")
@@ -57,7 +57,7 @@ class BoltTests(unittest.TestCase):
         
 # Testing the serialRead() function.
         
-    def test_7(self):
+    def test_07(self):
         assert_value = json.loads(client.serialRead('10'))
         self.assertEqual(assert_value["success"],"1")
         self.assertEqual(assert_value["value"],"inventrom")
@@ -65,7 +65,7 @@ class BoltTests(unittest.TestCase):
         
 # Testing the restart() function.
 
-    def test_restart(self):
+    def test_10(self):
         assert_value = json.loads(client.restart())
         time.sleep(5)
         try :
@@ -76,7 +76,7 @@ class BoltTests(unittest.TestCase):
         
 # Testing the isAlive() function.
         
-    def test_8(self):
+    def test_08(self):
         assert_value = json.loads(client.isAlive())
         self.assertEqual(assert_value["success"],"1")
         self.assertEqual(assert_value["value"],"alive")
@@ -84,7 +84,7 @@ class BoltTests(unittest.TestCase):
         
 # Testing the isOnline() function
         
-    def test_9(self):
+    def test_09(self):
         assert_value = json.loads(client.isOnline())
         self.assertEqual(str(assert_value["success"]),"1")
         self.assertEqual(assert_value["value"],"online")
