@@ -1,7 +1,8 @@
 """Tests for UART functions"""
 import unittest
+import json
 from config import UART_CONFIG, CREDENTIALS
-from ..boltiot import Bolt
+from boltiot import Bolt
 
 bolt = Bolt(CREDENTIALS["API_KEY"], CREDENTIALS["DEVICE_ID"])
 
@@ -10,7 +11,7 @@ class TestUARTFunctions(unittest.TestCase):
     VALID_BAUD_RATE = UART_CONFIG["VALID_BAUD_RATE"]
     INVALID_BAUD_RATE = UART_CONFIG["INVALID_BAUD_RATE"]
     VALID_BAUD_RESPONSE = UART_CONFIG["VALID_BAUD_RESPONSE"]
-    INVALID_BAUD_RESPONSE = UART_CONFIG["INVALID_BAUD_RATE"]
+    INVALID_BAUD_RESPONSE = UART_CONFIG["INVALID_BAUD_RESPONSE"]
     VALID_TILL = UART_CONFIG["VALID_TILL"]
     INVALID_TILL = UART_CONFIG["INVALID_TILL"]
     VALID_TILL_VALUE = UART_CONFIG["VALID_TILL_VALUE"]
@@ -51,3 +52,6 @@ class TestUARTFunctions(unittest.TestCase):
         resp = json.loads(bolt.serialWrite(self.INVALID_WRITE_VALUE))
         self.assertEqual(resp["success"], self.FAILED_RESPONSE)
         self.assertEqual(resp["value"], self.INVALID_DATA_RESPONSE)
+
+if __name__ == '__main__':
+    unittest.main()

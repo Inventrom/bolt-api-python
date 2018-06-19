@@ -1,7 +1,8 @@
 """Test utility functions"""
 import unittest
 from config import UTILITY_CONFIG, CREDENTIALS
-from ..boltiot import Bolt
+from boltiot import Bolt
+import json
 
 bolt = Bolt(CREDENTIALS["API_KEY"], CREDENTIALS["DEVICE_ID"])
 
@@ -15,7 +16,7 @@ class TestUtilityFunctions(unittest.TestCase):
 
     def test_is_online_successfull_operation(self):
         resp = json.loads(bolt.isOnline())
-        self.assertEqual(resp["success"], self.SUCCESS_RESPONSE)
+        self.assertEqual(str(resp["success"]), self.SUCCESS_RESPONSE)
         self.assertEqual(resp["value"], self.ONLINE_VALUE)
 
     def test_version_successfull_operation(self):
@@ -29,3 +30,6 @@ class TestUtilityFunctions(unittest.TestCase):
             self.assertEqual(resp["value"], self.RESTART_RESPONSE)
         except AssertionError:
             self.assertEqual(resp["value"], self.RESTART_ALTERNATIVE_RESPONSE)
+
+if __name__ == '__main__':
+    unittest.main()
