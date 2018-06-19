@@ -1,7 +1,8 @@
 """Testing file for GPIO functions"""
 import unittest
+import json
 from config import GPIO_CONFIG, CREDENTIALS
-from ..boltiot import Bolt
+from boltiot import Bolt
 
 bolt = Bolt(CREDENTIALS["API_KEY"],CREDENTIALS["DEVICE_ID"])
 
@@ -15,6 +16,10 @@ class TestGPIOFunctions(unittest.TestCase):
     INVALID_STATE_RESPONSE = GPIO_CONFIG["INVALID_STATE_RESPONSE"]
     SUCCESS_RESPONSE = GPIO_CONFIG["SUCCESS_RESPONSE"]
     FAILED_RESPONSE = GPIO_CONFIG["FAILED_RESPONSE"]
+    READ_VALUE = GPIO_CONFIG["READ_VALUE"]
+    ANALOG_WRITE_PIN = GPIO_CONFIG["ANALOG_WRITE_PIN"]
+    ANALOG_READ_PIN = GPIO_CONFIG["ANALOG_READ_PIN"]
+    ANALOG_WRITE_VALUE = GPIO_CONFIG["ANALOG_WRITE_VALUE"]
 
     def test_digital_write_successfull_write_operation(self):
         resp = json.loads(bolt.digitalWrite(self.VALID_PIN,
@@ -49,7 +54,7 @@ class TestGPIOFunctions(unittest.TestCase):
     def test_digital_read_successfull_read_operation(self):
         resp = json.loads(bolt.digitalRead(self.VALID_PIN))
         self.assertEqual(resp["success"], self.SUCCESS_RESPONSE)
-        self.assertEqual(resp["value"], self.SUCCESS_RESPONSE)
+        self.assertEqual(resp["value"], self.READ_VALUE)
 
     def test_digital_read_failed_read_with_invalid_pin_value(self):
         resp = json.loads(bolt.digitalRead(self.INVALID_PIN))
@@ -59,9 +64,12 @@ class TestGPIOFunctions(unittest.TestCase):
     def test_analog_read_successfull_read_operation(self):
         resp = json.loads(bolt.analogRead(self.ANALOG_READ_PIN))
         self.assertEqual(resp["success"], self.SUCCESS_RESPONSE)
-        self.assertTrue(0 <= resp["value"] <= 1024)
+        self.assertTrue(0 <= int(resp["value"]) <= 1024)
 
     def test_analog_read_failed_with_invalid_pin(self):
         resp = json.loads(bolt.analogRead(self.INVALID_PIN))
         self.assertEqual(resp["success"], self.FAILED_RESPONSE)
         self.assertEqual(resp["value"], self.INVALID_PIN_RESPONSE)
+
+if __name__ == '__main__':
+    unittest.main()
