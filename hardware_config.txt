@@ -1,4 +1,4 @@
-**** Follow This Hardware Setup Guide Before Running a Unit test ****
+**** Follow This Hardware Setup Guide Before Running Functionality Test ****
 
 1. Make sure that Bolt is connected to the Bolt Cloud.
 2. Make sure that you have entered the correct API_KEY and BOLT_ID before running the test.
