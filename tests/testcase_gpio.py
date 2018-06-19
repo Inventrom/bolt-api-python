@@ -17,51 +17,51 @@ class TestGPIOFunctions(unittest.TestCase):
     FAILED_RESPONSE = GPIO_CONFIG["FAILED_RESPONSE"]
 
     def test_digital_write_successfull_write_operation(self):
-        resp = json.loads(bolt.DigitalWrite(self.VALID_PIN,
+        resp = json.loads(bolt.digitalWrite(self.VALID_PIN,
                                             self.VALID_DIGITAL_WRITE_VALUE))
         self.assertEqual(resp["success"], self.SUCCESS_RESPONSE)
         self.assertEqual(resp["value"], self.SUCCESS_RESPONSE)
 
     def test_digital_write_failed_write_with_invalid_pin_value(self):
-        resp = json.loads(bolt.DigitalWrite(self.INVALID_PIN,
+        resp = json.loads(bolt.digitalWrite(self.INVALID_PIN,
                                             self.VALID_DIGITAL_WRITE_VALUE))
         self.assertEqual(resp["success"], self.FAILED_RESPONSE)
         self.assertEqual(resp["value"], self.INVALID_PIN_RESPONSE)
 
     def test_digital_write_failed_write_with_invalid_write_value(self):
-        resp = json.loads(bolt.DigitalWrite(self.VALID_PIN,
+        resp = json.loads(bolt.digitalWrite(self.VALID_PIN,
                                             self.INVALID_DIGITAL_WRITE_VALUE))
         self.assertEqual(resp["success"], self.FAILED_RESPONSE)
         self.assertEqual(resp["value"], self.INVALID_STATE_RESPONSE)
 
     def test_analog_write_successfull_write_operation(self):
-        resp = json.loads(bolt.AnalogWrite(self.ANALOG_WRITE_PIN,
+        resp = json.loads(bolt.analogWrite(self.ANALOG_WRITE_PIN,
                                            self.ANALOG_WRITE_VALUE))
         self.assertEqual(resp["success"], self.SUCCESS_RESPONSE)
         self.assertEqual(resp["value"], self.SUCCESS_RESPONSE)
 
     def test_analog_write_failed_write_with_invalid_pin_value(self):
-        resp = json.loads(bolt.AnalogWrite(self.INVALID_PIN,
+        resp = json.loads(bolt.analogWrite(self.INVALID_PIN,
                                            self.ANALOG_WRITE_VALUE))
         self.assertEqual(resp["success"], self.FAILED_RESPONSE)
         self.assertEqual(resp["value"], self.INVALID_PIN_RESPONSE)
 
     def test_digital_read_successfull_read_operation(self):
-        resp = json.loads(bolt.DigitalRead(self.VALID_PIN))
+        resp = json.loads(bolt.digitalRead(self.VALID_PIN))
         self.assertEqual(resp["success"], self.SUCCESS_RESPONSE)
         self.assertEqual(resp["value"], self.SUCCESS_RESPONSE)
 
     def test_digital_read_failed_read_with_invalid_pin_value(self):
-        resp = json.loads(bolt.DigitalRead(self.INVALID_PIN))
+        resp = json.loads(bolt.digitalRead(self.INVALID_PIN))
         self.assertEqual(resp["success"], self.FAILED_RESPONSE)
         self.assertEqual(resp["value"], self.INVALID_PIN_RESPONSE)
 
     def test_analog_read_successfull_read_operation(self):
-        resp = json.loads(bolt.AnalogRead(self.ANALOG_READ_PIN))
+        resp = json.loads(bolt.analogRead(self.ANALOG_READ_PIN))
         self.assertEqual(resp["success"], self.SUCCESS_RESPONSE)
         self.assertTrue(0 <= resp["value"] <= 1024)
 
     def test_analog_read_failed_with_invalid_pin(self):
-        resp = json.loads(bolt.AnalogRead(self.INVALID_PIN))
+        resp = json.loads(bolt.analogRead(self.INVALID_PIN))
         self.assertEqual(resp["success"], self.FAILED_RESPONSE)
         self.assertEqual(resp["value"], self.INVALID_PIN_RESPONSE)
