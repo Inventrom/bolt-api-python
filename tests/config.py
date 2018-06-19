@@ -29,6 +29,14 @@ UART_CONFIG = {
     "INVALID_DATA_RESPONSE": "Command timed out"
 }
 
+UTILITY_CONFIG = {
+    "SUCCESS_RESPONSE": '1',
+    "FAILED_RESPONSE": '0',
+    "RESTART_RESPONSE": "Restarted",
+    "RESTART_ALTERNATIVE_RESPONSE": "Command timed out",
+    "ONLINE_VALUE": "online"
+}
+
 CREDENTIALS = {
     "API_KEY": "xxxx",
     "DEVICE_ID": "xxxx"
