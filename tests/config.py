@@ -1,3 +1,6 @@
+"""This file contains all the configurations for unit testing."""
+
+# Configurations for testing GPIO related functions.
 GPIO_CONFIG = {
     "VALID_PIN": '0',
     "VALID_DIGITAL_WRITE_VALUE": "HIGH",
@@ -12,6 +15,7 @@ GPIO_CONFIG = {
     "ANALOG_WRITE_PIN": '0'
 }
 
+# Configurations for testing UART realted functions.
 UART_CONFIG = {
     "SUCCESS_RESPONSE": '1',
     "FAILED_RESPONSE": '0',
@@ -29,6 +33,7 @@ UART_CONFIG = {
     "INVALID_DATA_RESPONSE": "Command timed out"
 }
 
+# Configurations for testing Utilities realted functions.
 UTILITY_CONFIG = {
     "SUCCESS_RESPONSE": '1',
     "FAILED_RESPONSE": '0',
@@ -37,6 +42,7 @@ UTILITY_CONFIG = {
     "ONLINE_VALUE": "online"
 }
 
+# User configurations.
 CREDENTIALS = {
     "API_KEY": "xxxx",
     "DEVICE_ID": "xxxx"
