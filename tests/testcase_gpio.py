@@ -43,6 +43,7 @@ class TestGPIOFunctions(unittest.TestCase):
         self.assertEqual(resp["success"], self.SUCCESS_RESPONSE)
         self.assertEqual(resp["value"], self.SUCCESS_RESPONSE)
 
+    @unittest.skip("Will be deployed after API fixes")
     def test_digital_write_failed_write_with_invalid_pin_value(self):
         """
         The function tests for a failed response,
