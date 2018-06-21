@@ -21,6 +21,9 @@ class TestGPIOFunctions(unittest.TestCase):
     -test_analog_read_failed_with_invalid_pin()
     """
 
+    def tearDown(self):
+        time.sleep(3)
+
     VALID_PIN = GPIO_CONFIG["VALID_PIN"]
     INVALID_PIN = GPIO_CONFIG["INVALID_PIN"]
     VALID_DIGITAL_WRITE_VALUE = GPIO_CONFIG["VALID_DIGITAL_WRITE_VALUE"]

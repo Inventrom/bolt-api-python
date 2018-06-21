@@ -33,6 +33,9 @@ class TestUARTFunctions(unittest.TestCase):
     SUCCESS_RESPONSE = UART_CONFIG["SUCCESS_RESPONSE"]
     FAILED_RESPONSE = UART_CONFIG["FAILED_RESPONSE"]
 
+    def tearDown(self):
+        time.sleep(3)
+
     def test_serial_begin_successfull_operation(self):
         """
         The function tests for a successfull serial begin operation.

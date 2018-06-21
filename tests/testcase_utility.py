@@ -20,6 +20,9 @@ class TestUtilityFunctions(unittest.TestCase):
     RESTART_ALTERNATIVE_RESPONSE = UTILITY_CONFIG["RESTART_ALTERNATIVE_RESPONSE"]
     ONLINE_VALUE = UTILITY_CONFIG["ONLINE_VALUE"]
 
+    def tearDown(self):
+        time.sleep(3)
+
     def test_is_online_successfull_operation(self):
         """
         The function tests for a successfull isOnline function.
