@@ -3,7 +3,7 @@ import json
 import unittest
 from context import Bolt
 
-client = Bolt('<your-api-key-here>', '<your-bolt-id>') # Pass in the API Key and the client ID.
+client = Bolt("<your-api-key-here>", "<your-bolt-id>") # Pass in the API Key and the client ID.
 
 class BoltTests(unittest.TestCase, unittest.TestLoader):
 
