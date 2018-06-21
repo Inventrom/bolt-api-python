@@ -28,6 +28,7 @@ class TestUtilityFunctions(unittest.TestCase):
         self.assertEqual(str(resp["success"]), self.SUCCESS_RESPONSE)
         self.assertEqual(resp["value"], self.ONLINE_VALUE)
 
+    @unittest.skip("Will be implemented after api bug fix")
     def test_version_successfull_operation(self):
         """
         The function tests for a successfull version function.
