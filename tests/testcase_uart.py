@@ -58,6 +58,7 @@ class TestUARTFunctions(unittest.TestCase):
         self.assertEqual(resp["success"], self.SUCCESS_RESPONSE)
         self.assertEqual(resp["value"], self.VALID_TILL_VALUE)
 
+    @unittest.skip("Will be implemented after API fix.")
     def test_serial_read_failed_with_invalid_till(self):
         """
         The function tests for a failed serial read operation,
