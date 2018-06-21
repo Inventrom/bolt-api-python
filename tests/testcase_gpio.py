@@ -1,6 +1,7 @@
 """Testing file for GPIO functions"""
 import unittest
 import json
+import time
 from context import Bolt
 from config import GPIO_CONFIG, CREDENTIALS
 

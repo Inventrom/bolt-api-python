@@ -1,6 +1,7 @@
 """Tests for UART functions"""
 import unittest
 import json
+import time
 from context import Bolt
 from config import UART_CONFIG, CREDENTIALS
 

@@ -1,6 +1,7 @@
 """Test utility functions"""
 import unittest
 import json
+import time
 from context import Bolt
 from config import UTILITY_CONFIG, CREDENTIALS
 
