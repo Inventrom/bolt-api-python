@@ -9,10 +9,11 @@ GPIO_CONFIG = {
     "SUCCESS_RESPONSE": '1',
     "FAILED_RESPONSE": '0',
     "INVALID_PIN_RESPONSE": "Invalid pin value",
-    "INVALID_STATE_RESPONSE": "Invalid pin",
+    "INVALID_STATE_RESPONSE": "Invalid state",
     "ANALOG_WRITE_VALUE": "100",
     "ANALOG_READ_PIN": "A0",
-    "ANALOG_WRITE_PIN": '0'
+    "ANALOG_WRITE_PIN": '0',
+    "READ_VALUE": "0"
 }
 
 # Configurations for testing UART realted functions.
@@ -43,7 +44,14 @@ UTILITY_CONFIG = {
 }
 
 # User configurations.
+'''
 CREDENTIALS = {
     "API_KEY": "xxxx",
     "DEVICE_ID": "xxxx"
+}
+'''
+
+CREDENTIALS = {
+  "API_KEY": "a0aad35f-9050-4557-870d-7c349356713e",
+   "DEVICE_ID": "BOLT3463241"
 }
