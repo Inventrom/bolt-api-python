@@ -1,7 +1,7 @@
 """Test utility functions"""
 import unittest
 import json
-from boltiot import Bolt
+from context import Bolt
 from config import UTILITY_CONFIG, CREDENTIALS
 
 bolt = Bolt(CREDENTIALS["API_KEY"], CREDENTIALS["DEVICE_ID"])
