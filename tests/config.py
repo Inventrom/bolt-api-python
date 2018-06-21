@@ -30,7 +30,7 @@ UART_CONFIG = {
     "INVALID_TILL_VALUE": "Invalid till value",
     "VALID_WRITE_VALUE": "hello",
     "INVALID_WRITE_VALUE": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "VALID_DATA_RESPONSE": "Serial write Successfull",
+    "VALID_DATA_RESPONSE": "Serial write Successful",
     "INVALID_DATA_RESPONSE": "Command timed out"
 }
 
@@ -44,14 +44,7 @@ UTILITY_CONFIG = {
 }
 
 # User configurations.
-'''
 CREDENTIALS = {
     "API_KEY": "xxxx",
     "DEVICE_ID": "xxxx"
-}
-'''
-
-CREDENTIALS = {
-  "API_KEY": "a0aad35f-9050-4557-870d-7c349356713e",
-   "DEVICE_ID": "BOLT3463241"
 }
