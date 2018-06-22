@@ -145,7 +145,7 @@ The goal of this library is to provide an easy to use interface of Bolt Cloud AP
 
 ### Unit testing
 
-All the unit tests are contained in the **/tests** folder. Run this tests when you want to check individual functions of the library.
+All the unit tests pertaining to this library are present in the **/tests** folder. These tests can be executed when you want to test particular functionalities of the library.
 
 Running a unit test is simple enter your credentails in the **/tests/config.py** and you can run tests petaining to GPIO, UART and/or Utility functions.
 
@@ -153,7 +153,7 @@ Running a unit test is simple enter your credentails in the **/tests/config.py**
 
 ##### Running a functionality test:
 1. Setup the hardware as described in the **hardware_config.txt**
-2. Run **functionality_testing.py** 
+2. Run **functionality_testing.py**
 
 ## Bolt API documenation
 
