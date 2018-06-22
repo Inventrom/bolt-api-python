@@ -24,74 +24,66 @@ class BoltTests(unittest.TestCase, unittest.TestLoader):
     - test_isOnline()
     - test_isAlive()
     """
-
-# Setup function for all the testcases.
+    
     def setUp(self):
+        """Setup function for all the testcases."""
         self.sortTestMethodsUsing = None
 
-# Tear down function for all the testcases
     def tearDown(self):
+        """Tear down function for all the testcases"""
         time.sleep(3)
 
-# Testing the digital write function.
-
     def test_digitalWrite(self):
+        """Testing the digital write function."""
         assert_value = json.loads(client.digitalWrite('4', "HIGH"))
         self.assertEqual(assert_value["success"], '1')
         self.assertEqual(assert_value["value"], '1')
         print("Digital Write Successfull!")
 
-# Testing the analog write function
-
     def test_analogWrite(self):
+        """Testing the analog write function"""
         assert_value = json.loads(client.analogWrite('0', "100"))
         self.assertEqual(assert_value["success"], '1')
         self.assertEqual(assert_value["value"], '1')
         print("Analog Write Successfull!")
 
-# Testing the digital read function.
-
     def test_digitalRead(self):
+        """Testing the digital read function."""
         assert_value = json.loads(client.digitalRead('1'))
         self.assertEqual(assert_value["success"], '1')
         self.assertEqual(int(assert_value["value"]), 1)
         print("Digital Read Successfull!")
 
-# Testing the analog read function.
-
     def test_analogRead(self):
+        """Testing the analog read function."""
         assert_value = json.loads(client.analogRead("A0"))
         self.assertEqual(assert_value["success"], '1')
         self.assertTrue(0 <= int(assert_value["value"]) <= 1024)
         print("Analog Read Succesfull!")
 
-# Testing the serialBegin() function.
-
     def test_serialBegin(self):
+        """Testing the serialBegin() function."""
         assert_value = json.loads(client.serialBegin("9600"))
         self.assertEqual(assert_value["success"], '1')
         self.assertEqual(assert_value["value"], "Success")
-        print("Serial Begin Successfull!")
-
-# Testing the serialWrite() function.
+        print("Serial Begin Successfull!"
 
     def test_serialWrite(self):
+        """Testing the serialWrite() function."""
         assert_value = json.loads(client.serialWrite('inventrom'))
         self.assertEqual(assert_value["success"], '1')
         self.assertEqual(assert_value["value"], "Serial write Successful")
         print("Serial Write Successfull!")
 
-# Testing the serialRead()
-
     def test_serialRead(self):
+        """Testing the serialRead()"""
         assert_value = json.loads(client.serialRead("10"))
         self.assertEqual(assert_value["success"], '1')
         self.assertEqual(assert_value["value"], "inventrom")
         print("Serial Read Successfull!")
 
-# Testing the restart() function.
-
     def test_Restart(self):
+        """Testing the restart() function."""
         assert_value = json.loads(client.restart())
         time.sleep(5)
         try:
@@ -100,17 +92,15 @@ class BoltTests(unittest.TestCase, unittest.TestLoader):
             self.assertEqual(assert_value["value"], "Command timed out")
         print("Restart Successfull!")
 
-# Testing the isAlive() function.
-
     def test_isAlive(self):
+        """Testing the isAlive() function."""
         assert_value = json.loads(client.isAlive())
         self.assertEqual(assert_value["success"], '1')
         self.assertEqual(assert_value["value"], "alive")
         print("isAlive Successfull!")
 
-# Testing the isOnline()
-
     def test_isOnline(self):
+        """Testing the isOnline()"""
         assert_value = json.loads(client.isOnline())
         self.assertEqual(str(assert_value["success"]), '1')
         self.assertEqual(assert_value["value"], "online")
