@@ -1,9 +1,10 @@
 """Tests for UART functions"""
-import unittest
 import json
 import time
-from context import Bolt
+import unittest
+
 from config import UART_CONFIG, CREDENTIALS
+from context import Bolt
 
 bolt = Bolt(CREDENTIALS["API_KEY"], CREDENTIALS["DEVICE_ID"])
 

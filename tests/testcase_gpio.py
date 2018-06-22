@@ -1,9 +1,10 @@
 """Testing file for GPIO functions"""
-import unittest
 import json
 import time
-from context import Bolt
+import unittest
+
 from config import GPIO_CONFIG, CREDENTIALS
+from context import Bolt
 
 bolt = Bolt(CREDENTIALS["API_KEY"], CREDENTIALS["DEVICE_ID"])
 
