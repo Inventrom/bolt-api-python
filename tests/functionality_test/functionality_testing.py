@@ -1,14 +1,37 @@
-import time
 import json
+import time
 import unittest
+
 from context import Bolt
 
 client = Bolt("<your-api-key-here>", "<your-bolt-id>") # Pass in the API Key and the client ID.
 
 class BoltTests(unittest.TestCase, unittest.TestLoader):
+    """
+    This is a test class to test,
+    the functionality of the bolt python api library.
+    Methods:
+    - setUp()
+    - tearDown()
+    - test_digitalWrite()
+    - test_analogWrite()
+    - test_digitalRead()
+    - test_analogRead()
+    - test_serialBegin()
+    - test_serialWrite()
+    - test_serialRead()
+    - test_Restart()
+    - test_isOnline()
+    - test_isAlive()
+    """
 
+# Setup function for all the testcases.
     def setUp(self):
         self.sortTestMethodsUsing = None
+
+# Tear down function for all the testcases
+    def tearDown(self):
+        time.sleep(3)
 
 # Testing the digital write function.
 
