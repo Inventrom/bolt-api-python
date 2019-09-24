@@ -13,8 +13,8 @@ def request_from(url, *kwargs):
         return str({"success":"0", "message":"Too many redirects"})
     except requests.exceptions.RequestException as err:
         return str({"success":"0", "message":"Not able to handle error"})
-    except err:
-        return str({"success":"0", "message":"Something went wrong"})
+    except Exception as err:
+        return str({"success":"0", "message":str(err)})
 
 
 def request_test(function):
