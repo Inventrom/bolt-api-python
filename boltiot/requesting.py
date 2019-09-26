@@ -14,7 +14,7 @@ def request_from(url, *kwargs):
     except requests.exceptions.RequestException as err:
         return str({"success":"0", "message":"Not able to handle error"})
     except Exception as err:
-        return str({"success":"0", "message":str(err)})
+        return str({"success":"0", "message": "ERROR: " + str(err)})
 
 
 def request_test(function):
