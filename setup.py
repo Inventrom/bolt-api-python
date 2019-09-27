@@ -1,15 +1,15 @@
 from distutils.core import setup
 
 setup(
-    name = 'bolt',
-    packages = ['bolt'],
-    version = [''], #Specify a version here
-    description = [''], #Add a description here
-    author = [''], #Enter an author for the package
-    author_email  = [''], #Author's Email
-    url = [''], #URL for github repository
-    download = [''], #Download URL for github repository. Look at instructions...txt file for this part
-    install_requires=['twilio','requests'], #Automatic installation for any dependencies.
-    keywords = [''], #Add keywords
-    classifiers = [], #Leave this
-)
+    name = 'boltiot',
+    packages = ['boltiot'],
+    version = '1.11.2',
+    install_requires=['twilio','requests'],
+    description = 'A Python module for communicating with the Bolt Cloud API.',
+    author = 'Inventrom Pvt. Ltd.',
+    author_email  = 'support@boltiot.com',
+    url = 'https://github.com/Inventrom/bolt-api-python',
+    download = 'https://github.com/Inventrom/bolt-api-python/archive/1.11.2.tar.gz',
+    keywords = ['iot-platform','bolt','bolt-python'],
+    classifiers = []
+    )
